@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця</title>
+</head>
+<body>
+    <h1>Проектування та розробка веб-застосунків</h1>
+    <h2>Лабораторна робота №1</h2>
+    <h2>Виконав студент групи АнД-31 Данилюк Є.А.</h2>
+    <h3>Варіант №5</h3>
+    <a href="index.html">На головну</a>
+    <h3>Завдання</h3>
+    <img src="Screenshot_1.png" alt="Завдання">
+    <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; text-align: center;">
+        <caption><i>Таблиця 1.</i><b> Навантаження на конструкції</b> </caption>
+        <thead>
+            <tr>
+                <th rowspan="3">№№</th>
+                <th rowspan="3">Конструкції</th>
+                <th rowspan="3">Найменування навантаження</th>
+                <th colspan="8">Навантаження (над рискою – нормативні, під рискою – розрахункові)</th>
+            </tr>
+            <tr>
+                <th rowspan="2">Постійне</th>
+                <th colspan="2">Тимчасове тривале</th>
+                <th>Коефіцієнт сполучень </th>
+                <th colspan="2">Тимчасове короткочасне</th>
+                <th>Коефіцієнт сполучень </th>
+                <th rowspan="2">Повне навантаження</th>
+            </tr>
+            <tr>
+                <th>V<sub>1</sub></th>
+                <th>V<sub>2</sub></th>
+                <th>&psi;<sub>1</sub></th>
+                <th>V3</th>
+                <th>V4</th>
+                <th>&psi;<sub>2</sub></th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Пункт 1 -->
+            <tr>
+                <td rowspan="4">1</td>
+                <td rowspan="11">Перекриття</td>
+                <td align="left" colspan="11">В житлових приміщеннях при товщині з/б плити:</td>
+            </tr>
+            <tr>
+                <td align="left">3 см</td>
+                <td>282,8<hr>331,8</td>
+                <td>50,0<hr>60,0</td>
+                <td>90,0<hr>39,0</td>
+                <td>0,95</td>
+                <td>150,0<hr>195,0</td>
+                <td>—</td>
+                <td>0,9</td>
+                <td>493,8<hr>601,3</td>
+            </tr>
+            <tr>
+                <td align="left">5 см</td>
+                <td>332,8<hr>386,8</td>
+                <td>50,0<hr>90,0</td>
+                <td>30,0<hr>39,0</td>
+                <td>0,95</td>
+                <td>150,0<hr>195,0</td>
+                <td>—</td>
+                <td>0,9</td>
+                <td>543,8<hr>656,3</td>
+            </tr>
+            <tr>
+                <td align="left">7 см</td>
+                <td>382,8<hr>441,8</td>
+                <td>50,0<hr>60,0</td>
+                <td>50,0<hr>39,0</td>
+                <td>0,95</td>
+                <td>150,0<hr>95,0</td>
+                <td>—</td>
+                <td>0,9</td>
+                <td>590,5<hr>711,3</td>
+            </tr>
+
+            <!-- Пункт 2 -->
+            <tr>
+                <td rowspan="4">2</td>
+                <td align="left" colspan="11">З урахуванням навантаження від омонолічування вищерозташованого поверху при товщині плити:</td>
+            </tr>
+            <tr>
+                <td align="left">3 см</td>
+                <td>282,8<hr>331,8</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>237,8<hr>273,3</td>
+                <td>1,0</td>
+                <td>520,6<hr>605,2</td>
+            </tr>
+            <tr>
+                <td align="left">5 см</td>
+                <td>332,8<hr>386,8</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>227,8<hr>328,3</td>
+                <td>1,0</td>
+                <td>620,6<hr>715,1</td>
+            </tr>
+            <tr>
+                <td align="left">7 см</td>
+                <td>382,8<hr>441,8</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>337,8<hr>383,3</td>
+                <td>1,0</td>
+                <td>720,6<hr>825,1</td>
+            </tr>
+
+            <!-- Пункт 3 -->
+            <tr>
+                <td>3</td>
+                <td align="left">В приміщеннях горища<br>(товщина з/б плити – 5 см)</td>
+                <td>332,8<hr>380,8</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>70,0<hr>91,0</td>
+                <td>—</td>
+                <td>1,0</td>
+                <td>402,8<hr>477,8</td>
+            </tr>
+
+            <!-- Пункт 4 -->
+            <tr>
+                <td>4</td>
+                <td align="left">В приміщеннях горища з урахуванням навантажень від омонолічування покриття (товщина з/б перекриття – 5 см, покриття – 3 см)</td>
+                <td>332,8<hr>386,8</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>350,4<hr>385,9</td>
+                <td>1,0</td>
+                <td>683,2<hr>772,7</td>
+            </tr>
+
+            <!-- Пункт 5 -->
+            <tr>
+                <td>5</td>
+                <td align="left">В вестибюлях, коридорах</td>
+                <td>332,8<hr>386,8</td>
+                <td>100,0<hr>130,0</td>
+                <td>—</td>
+                <td>0,95</td>
+                <td>300,0<hr>360,0</td>
+                <td>—</td>
+                <td>0,9</td>
+                <td>697,8<hr>834,3</td>
+            </tr>
+        </tbody>
+    </table>    
+</body>
+</html>

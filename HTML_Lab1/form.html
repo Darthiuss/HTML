@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+</head>
+<body>
+    <h1>Проектування та розробка веб-застосунків</h1>
+    <h2>Лабораторна робота №1</h2>
+    <h2>Виконав студент групи АнД-31 Данилюк Є.А.</h2>
+    <h3>Варіант №5</h3>
+    <a href="index.html">На головну</a>
+    <h3>Завдання</h3>
+    <p>Необхідно розробити форму для введення інформації про фільм до БД фільмів. Необхідно заповнити наступні данні:</p>
+    <ul>
+        <li>
+            дані про фільм, включають назву фільму, жанр(вибирається зі списку), дату виходу на екрани, опис фільму, картинку з афішою;
+        </li>
+        <li>
+            дані про режисера, включають ПІБ, дату народження, біографію, посилання на веб-сайт.
+        </li>
+    </ul>
+
+    <form action = "" method = "POST">
+        <fieldset>
+            <legend>Фільм</legend>
+            <p>
+            <label>Назва фільму:
+                <input id="movie_name" type="text">
+            </label>
+            </p>
+            <p>
+            <label>Жанр:
+                <select id="genre" name="genre">
+                    <option value="action">Бойовик</option>
+                    <option value="comedy">Комедія</option>
+                    <option value="drama">Драма</option>
+                </select>
+            </label>
+            </p>
+            <p>
+            <label>Дата виходу:
+                <input id="release_date" type="date">
+            </label>
+            </p>
+            <p>
+            <label>Опис:
+                <textarea id="description" name="description"></textarea>
+            </label>
+            </p>
+            <p>
+            <label>Картинка з афішою:
+                <input id="poster" type="file" accept="image/*">
+            </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Режисер</legend>
+            <p>
+            <label>ПІБ:
+                <input id="director_name" type="text">
+            </label>
+            </p>
+            <p>
+            <label>Дата народження:
+                <input id="birth_date" type="date">
+            </label>
+            </p>
+            <p>
+            <label>Біографія:
+                <textarea id="biography" name="biography"></textarea>
+            </label>
+            </p>
+            <p>
+            <label>Посилання на веб-сайт:
+                <input id="website" type="url">
+            </label>
+            </p>
+        </fieldset>
+        <button type="submit">Відправити</button>
+    </form>
+</body>
+</html>
