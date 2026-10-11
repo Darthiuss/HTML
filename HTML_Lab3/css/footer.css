@@ -1,0 +1,6 @@
+.footer { clear: both; position: relative; height: 150px; background-color: var(--color-navy); color: #aab4d4; font-size: 14px; }
+.footer .f-logo { position: absolute; top: 40px; left: 64px; font-size: 38px; font-weight: 700; color: var(--color-white); line-height: 1; }
+.footer .f-slogan { position: absolute; top: 48px; left: 190px; }
+.footer .f-top { position: absolute; top: 48px; right: 64px; color: var(--color-white); }
+.footer .f-top:hover { color: #8fa6ff; text-decoration: underline; }
+.footer .f-copy { position: absolute; left: 64px; right: 64px; top: 100px; padding-top: 22px; border-top: 1px solid #2c3d6e; font-size: 12px; }

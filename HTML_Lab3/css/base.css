@@ -1,0 +1,15 @@
+/* Базові налаштування */
+:root {
+  --width: 1440px;
+  --color-bg: #f5f5f2;
+  --color-white: #ffffff;
+  --color-blue: #2447e0;
+  --color-tint: #e9eefc;
+  --color-navy: #16254f;
+  --color-title: #1d2230;
+  --color-text: #6b7280;
+  --color-line: #dcdcd6;
+  --font-family: "Inter", Arial, sans-serif;
+  --font-size-p: 18px;
+  --font-size-small: 14px;
+}

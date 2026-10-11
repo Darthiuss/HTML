@@ -1,0 +1,49 @@
+.section { margin: 0 64px; border-top: 1px solid var(--color-line); }
+.section:first-of-type { border-top: 0; }
+.content { float: left; width: 896px; padding: 56px 0; }
+.content h1 { font-size: 62px; line-height: 1.05; margin-bottom: 26px; }
+.content h2 { font-size: 38px; line-height: 1.15; margin-bottom: 18px; }
+.content h3 { font-size: 22px; color: var(--color-title); font-weight: 500; margin: 56px 0 20px; }
+.lead { font-size: 18px; line-height: 1.7; margin-bottom: 30px; max-width: 840px; }
+.note { font-size: 13px; margin-left: 14px; }
+.btns { margin-bottom: 44px; }
+
+/* Три колонки */
+.col3 > div { float: left; width: 31.5%; margin-right: 2.75%; }
+.col3 > div:last-child { margin-right: 0; }
+.col3::after { content: ""; display: block; clear: both; }
+.feature { border-top: 1px solid var(--color-line); padding-top: 22px; margin-top: 44px; font-size: 14px; line-height: 1.55; }
+.feature b { display: block; font-size: 16px; color: var(--color-title); margin: 8px 0; }
+.feature i { font-style: normal; color: var(--color-blue); font-size: 20px; }
+.caption { font-size: 12px; margin-top: 10px; overflow: hidden; }
+.caption span { float: right; color: var(--color-blue); }
+
+/* Картки операційних систем */
+.os { background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: 6px; padding: 24px; font-size: 12px; line-height: 1.7; }
+.os:hover { border-color: var(--color-blue); }
+.os.main { border: 2px solid var(--color-blue); }
+.os h4 { font-size: 22px; font-weight: 500; color: var(--color-title); margin-bottom: 4px; }
+.os .btn { margin-top: 18px; padding: 12px 18px; font-size: 14px; }
+.os .btn-light { border-color: var(--color-line); }
+.safe { font-size: 12px; margin: 22px 0 0; }
+
+/* Автор */
+.author { background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: 6px; padding: 28px; margin-top: 30px; overflow: hidden; }
+.avatar { float: left; width: 96px; height: 96px; line-height: 96px; text-align: center; border-radius: 6px; background-color: var(--color-tint); color: var(--color-blue); font-size: 40px; font-weight: 500; margin-right: 28px; }
+.author h4 { font-size: 26px; font-weight: 500; color: var(--color-title); }
+.author p { font-size: 13px; padding-bottom: 14px; border-bottom: 1px solid var(--color-line); margin-bottom: 14px; }
+.contact-links a { color: var(--color-blue); font-size: 14px; margin-right: 26px; }
+
+/* Форма */
+.form { background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: 6px; padding: 32px; }
+.form label { display: block; font-size: 13px; font-weight: 500; color: var(--color-title); margin-bottom: 8px; }
+.form .half { float: left; width: 48.5%; margin-bottom: 24px; }
+.form .half + .half { margin-left: 3%; }
+.form .full { clear: both; margin-bottom: 20px; }
+.form input[type=text], .form input[type=email], .form textarea { width: 100%; border: 1px solid var(--color-line); border-radius: 4px; padding: 14px; font-size: 14px; background-color: var(--color-bg); }
+.form input:focus, .form textarea:focus { border-color: var(--color-blue); }
+.form textarea { height: 140px; resize: none; }
+.form .agree { font-size: 12px; font-weight: 400; color: var(--color-text); }
+.form .agree input { margin-right: 10px; }
+.form .req-note { float: right; font-size: 12px; margin-top: 18px; }
+.form button.btn { cursor: pointer; }

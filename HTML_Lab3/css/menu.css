@@ -1,0 +1,8 @@
+.menu { height: 68px; background-color: var(--color-white); border-bottom: 1px solid var(--color-line); padding: 0 64px; }
+.menu li { display: inline-block; margin-right: 36px; }
+.menu li a { display: block; height: 68px; line-height: 68px; font-size: 15px; font-weight: 500; color: var(--color-title); border-bottom: 2px solid transparent; }
+.menu li a span { font-size: 11px; color: var(--color-text); margin-right: 8px; }
+.menu li a:hover, .menu li.active a { color: var(--color-blue); border-bottom-color: var(--color-blue); }
+.menu li a:hover { text-decoration: underline; }
+.menu .try { float: right; margin-right: 0; }
+.menu .try a { color: var(--color-blue); font-weight: 600; }
