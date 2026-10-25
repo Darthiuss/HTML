@@ -1,0 +1,52 @@
+/* Навігація */
+.menu {
+  grid-area: menu;
+  background-color: var(--color-white);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+  padding-inline: var(--pad-x);
+}
+/* Відступи між пунктами меню */
+.menu_list { gap: 0 2.25rem; }
+.menu_list a {
+  display: block;
+  padding-block: 1.375rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: var(--color-title);
+  border-bottom: 2px solid transparent;
+}
+.menu_list a span { font-size: 0.6875rem; color: var(--color-text); margin-right: 0.5rem; }
+.menu_list a:hover, .menu_list .active a { color: var(--color-blue); border-bottom-color: var(--color-blue); }
+.menu_list a:hover { text-decoration: underline; }
+
+/* Гамбургер меню */
+.menu_btn {
+  grid-area: btn;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3125rem;
+  inline-size: 2.75rem;
+  aspect-ratio: 1;
+  margin-right: var(--pad-x);
+  padding: 0.625rem;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* Три лінії */
+.menu_btn span {
+  display: block;
+  block-size: 0.125rem;
+  border-radius: 1px;
+  background-color: var(--color-title);
+  transition: transform .25s, opacity .25s;
+}
+/* Перетворення трьох ліній на хрестик, коли меню відкрите */
+.menu_toggle:checked ~ .menu_btn span:nth-child(1) { transform: translateY(0.4375rem) rotate(45deg); }
+.menu_toggle:checked ~ .menu_btn span:nth-child(2) { opacity: 0; }
+.menu_toggle:checked ~ .menu_btn span:nth-child(3) { transform: translateY(-0.4375rem) rotate(-45deg); }
+.menu_toggle:focus-visible ~ .menu_btn { outline: 2px solid var(--color-blue); outline-offset: 2px; }

@@ -1,0 +1,19 @@
+/* Підвал */
+.footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "logo slogan top"
+    "copy copy   copy";
+  align-items: center;
+  gap: 1.75rem 2.5rem;
+  padding: 2.5rem var(--pad-x) 1.5rem;
+  background-color: var(--color-navy);
+  color: #aab4d4;
+  font-size: var(--font-size-small);
+}
+.footer .f-logo { grid-area: logo; font-size: 2.375rem; font-weight: 700; color: var(--color-white); line-height: 1; }
+.footer .f-slogan { grid-area: slogan; }
+.footer .f-top { grid-area: top; color: var(--color-white); }
+.footer .f-top:hover { color: #8fa6ff; text-decoration: underline; }
+.footer .f-copy { grid-area: copy; padding-top: 1.375rem; border-top: 1px solid #2c3d6e; font-size: 0.75rem; }

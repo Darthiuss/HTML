@@ -1,0 +1,32 @@
+/* Відгуки користувачів */
+.reviews { display: flex; flex-wrap: wrap; gap: var(--gap); }
+.review {
+  flex: 1 1 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: border-color .2s;
+}
+.review:hover { border-color: var(--color-blue); }
+.review_rating { color: #e0a100; font-size: 1.125rem; letter-spacing: 2px; line-height: 1; }
+.review_rating .star-off { color: var(--color-line); }
+.review_text { flex: 1; font-size: 1rem; line-height: 1.6; color: var(--color-title); }
+.review_author { display: flex; align-items: center; gap: 0.875rem; padding-top: 1.125rem; border-top: 1px solid var(--color-line); }
+.review_avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  inline-size: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-tint);
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+.review_name { display: block; font-weight: 600; font-size: 0.9375rem; color: var(--color-title); }
+.review_role { display: block; font-size: 0.8125rem; }

@@ -1,0 +1,78 @@
+@import url("reset.css");
+@import url("base.css");
+@import url("menu.css");
+@import url("header.css");
+@import url("content.css");
+@import url("mock.css");
+@import url("sidebar.css");
+@import url("gallery.css");
+@import url("tabs.css");
+@import url("stats.css");
+@import url("reviews.css");
+@import url("timeline.css");
+@import url("footer.css");
+
+:root {
+  --pad-x: 4rem;          /* бічні відступи сторінки */
+  --section-py: 3.5rem;   /* вертикальні відступи секцій */
+  --gap: 1.5rem;          /* стандартний проміжок між картками */
+  --radius: 6px;
+  /* Гнучкі розміри заголовків */
+  --font-size-h1: clamp(2.25rem, 1.1rem + 3.6vw, 3.875rem);
+  --font-size-h2: clamp(1.75rem, 1.2rem + 1.6vw, 2.375rem);
+  --shadow: 0 12px 28px rgba(22, 37, 79, 0.12);
+}
+
+html { scroll-behavior: smooth; }
+body { background-color: var(--color-white); }
+
+/* Контейнер */
+.container {
+  max-width: var(--width);
+  margin-inline: auto;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-size: var(--font-size-p);
+  line-height: 1.6;
+}
+
+/*! Класи для адаптивності */
+/* Флекс */
+:where(.flex) { display: flex; gap: 0.625rem; }
+/* Перенос на наступний рядок */
+:where(.flex_wrap) { flex-wrap: wrap; }
+/* Вирівнювання по вертикалі */
+:where(.flex_align__center) { align-items: center; }
+/* Вирівнювання по горизонталі */
+:where(.flex_justify_center) { justify-content: center; }
+/* Елементи по краях */
+:where(.flex_justify_space) { justify-content: space-between; }
+/* Флекс у стовпчик */
+:where(.flex_column) { flex-direction: column; }
+
+.visually-hidden {
+  position: absolute !important;
+  inline-size: 1px; block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Видимий фокус для клавіатурної навігації */
+:focus-visible { outline: 2px solid var(--color-blue); outline-offset: 3px; }
+
+/* Стилі заголовків і тексту */
+.eyebrow { font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; color: var(--color-blue); font-weight: 600; margin-bottom: 1.25rem; }
+.title { color: var(--color-title); font-weight: 500; letter-spacing: -1px; }
+h1.title { font-size: var(--font-size-h1); line-height: 1.05; margin-bottom: 1.625rem; }
+h2.title { font-size: var(--font-size-h2); line-height: 1.15; margin-bottom: 1.125rem; }
+.subtitle { font-size: 1.375rem; color: var(--color-title); font-weight: 500; margin: 3.5rem 0 1.25rem; }
+.lead { font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.875rem; max-width: 52.5rem; }
+
+/* Кнопки */
+.btn { display: inline-block; padding: 0.875rem 1.375rem; font-size: 0.9375rem; font-weight: 600; text-align: center; border-radius: 4px; background-color: var(--color-blue); color: var(--color-white); border: 1px solid var(--color-blue); cursor: pointer; transition: background-color .2s, border-color .2s, color .2s; }
+.btn:hover { background-color: var(--color-navy); border-color: var(--color-navy); }
+.btn-light { background-color: var(--color-white); color: var(--color-title); border-color: var(--color-line); }
+.btn-light:hover { background-color: var(--color-tint); color: var(--color-blue); border-color: var(--color-blue); }

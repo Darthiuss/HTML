@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Лад — особистий простір для продуктивності: завдання, календар і нотатки в одному застосунку.">
+  <title>Лад — особистий простір для продуктивності</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<div class="container" id="top">
+
+  <!-- ШАПКА -->
+  <header class="header">
+    <input type="checkbox" id="menu-toggle" class="menu_toggle visually-hidden">
+
+    <div class="header_bar flex flex_align__center">
+      <a href="#top" class="logo flex flex_align__center" aria-label="Лад — на початок сторінки">
+        <span class="logo-mark" aria-hidden="true">л</span>
+        <span class="logo-name">лад</span>
+      </a>
+      <p class="tagline">Особистий простір для продуктивності</p>
+      <a href="#download" class="header_cta">Спробувати безкоштовно ↓</a>
+    </div>
+
+    <label for="menu-toggle" class="menu_btn flex flex_column flex_justify_center" aria-label="Відкрити або закрити меню">
+      <span></span><span></span><span></span>
+    </label>
+
+    <nav class="menu" aria-label="Основна навігація">
+      <ul class="menu_list flex flex_wrap flex_align__center">
+        <li class="active"><a href="#about"><span>01</span>Про продукт</a></li>
+        <li><a href="#features"><span>02</span>Можливості</a></li>
+        <li><a href="#reviews"><span>03</span>Відгуки</a></li>
+        <li><a href="#history"><span>04</span>Історія</a></li>
+        <li><a href="#download"><span>05</span>Завантаження</a></li>
+        <li><a href="#contacts"><span>06</span>Автор</a></li>
+        <li><a href="#feedback"><span>07</span>Зв’язок</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    <!-- ===== 01. Про продукт ===== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <article class="content">
+        <p class="eyebrow">01 / Про продукт</p>
+        <h1 class="title" id="about-title">Усі справи — в ладі.<br>Увага — на головному.</h1>
+        <p class="lead">Лад поєднує завдання, календар і нотатки в одному легкому застосунку для комп’ютера. Плануйте день, ведіть проєкти й зберігайте ідеї — без зайвих вкладок і складних налаштувань.</p>
+        <div class="btns flex flex_wrap flex_align__center">
+          <a href="#download" class="btn">Завантажити Лад ↓</a>
+          <a href="#features" class="btn btn-light">Переглянути приклади ⇲</a>
+          <span class="note">Безкоштовно. Без реєстрації.</span>
+        </div>
+
+        <figure class="shot">
+          <img src="img/Screenshot_1.png" alt="Дошка проєкту «Від ідеї до запуску» з колонками «Заплановано», «У роботі» та «Готово»">
+          <figcaption class="caption flex flex_wrap flex_justify_space">Дошка проєкту <span>ПРИКЛАД 01 / 03</span></figcaption>
+        </figure>
+
+        <div class="col3">
+          <article class="feature"><i aria-hidden="true">▦</i><h3>Зрозумілий план</h3><p>Дошки, пріоритети й терміни допомагають перетворити великий проєкт на конкретні кроки.</p></article>
+          <article class="feature"><i aria-hidden="true">▤</i><h3>Ідеї поруч зі справами</h3><p>Пов’язуйте нотатки із завданнями, щоб контекст не губився між різними застосунками.</p></article>
+          <article class="feature"><i aria-hidden="true">◈</i><h3>Ваші дані — у вас</h3><p>Працюйте без інтернету. Дані зберігаються локально, а резервні копії контролюєте ви.</p></article>
+        </div>
+      </article>
+
+      <aside class="sidebar" aria-label="Коротко про Лад">
+        <div class="side-block">
+          <h3>Коротко про Лад</h3>
+          <div class="version"><small>Актуальна версія</small><b>1.4.0</b><em>Оновлено <time datetime="2026-10-08">08 жовтня 2026</time></em>Windows · macOS · Linux</div>
+        </div>
+        <div class="side-block">
+          <h3>Для кого</h3>
+          <p>Для фрилансерів, студентів і всіх, хто хоче впорядкувати роботу та особисті справи без складної системи.</p>
+        </div>
+        <div class="side-block side-block--sep">
+          <h3>Без зайвого шуму</h3>
+          <p>Без реклами, обов’язкового облікового запису й прихованого збору даних. Просто ваш робочий простір.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===== 02. Можливості ===== -->
+    <section class="section section--wide" id="features" aria-labelledby="features-title">
+      <div class="content">
+        <p class="eyebrow">02 / Можливості</p>
+        <h2 class="title" id="features-title">Усе потрібне — під рукою.</h2>
+        <p class="lead">Кожна функція Ладу розв’язує одне завдання й не заважає іншим. Наведіть курсор на картку, щоб роздивитися приклад інтерфейсу.</p>
+
+        <!-- Адаптивна галерея / Медіа-картки -->
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-projects.png" alt="Бічна панель Ладу зі списком розділів і проєктів" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Проєкти</span>
+              <h3>Простори для кожної сфери</h3>
+              <p>Розділіть роботу й особисте: кожен проєкт має власну дошку, нотатки та календар.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-tasks.png" alt="Колонки «У роботі» та «Готово» з картками завдань і категоріями" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Завдання</span>
+              <h3>Статуси та категорії</h3>
+              <p>Пересувайте картки між колонками й позначайте їх категоріями: «Дизайн», «Продукт», «Дослідження».</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-week.png" alt="Тижневий календар із завданнями на кожен робочий день" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Календар</span>
+              <h3>Тиждень на одному екрані</h3>
+              <p>Розкладайте справи по днях і одразу бачте, де тиждень перевантажений.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-notes.png" alt="Розділ нотаток із тематичними добірками" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Нотатки</span>
+              <h3>Тематичні добірки</h3>
+              <p>Групуйте нотатки за темами: ідеї, питання до інтерв’ю, корисні посилання.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-checklist.png" alt="Нотатка з чек-листом, де частина пунктів уже виконана" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Нотатки</span>
+              <h3>Чек-листи в тексті</h3>
+              <p>Перетворюйте думки на дії прямо в нотатці й позначайте виконане без переходу до дошки.</p>
+            </div>
+          </article>
+          <article class="gallery-card">
+            <div class="gallery-card_media"><img src="img/gallery-done.png" alt="Колонка «Готово» із завершеними завданнями" loading="lazy"></div>
+            <div class="gallery-card_body">
+              <span class="gallery-card_tag">Прогрес</span>
+              <h3>Видно, що вже зроблено</h3>
+              <p>Колонка «Готово» нагадує про результати й допомагає підбивати підсумки тижня.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Таби / Перемикач контенту -->
+        <section class="subsection" id="details" aria-labelledby="details-title">
+          <h3 class="subtitle" id="details-title">Лад зблизька</h3>
+          <div class="tabs">
+            <input type="radio" name="tabs" id="tab-desc" class="tabs_input visually-hidden" checked>
+            <label for="tab-desc" class="tabs_label">Опис</label>
+            <input type="radio" name="tabs" id="tab-specs" class="tabs_input visually-hidden">
+            <label for="tab-specs" class="tabs_label">Характеристики</label>
+            <input type="radio" name="tabs" id="tab-guide" class="tabs_input visually-hidden">
+            <label for="tab-guide" class="tabs_label">Інструкція</label>
+
+            <div class="tabs_panels">
+              <div class="tabs_panel tabs_panel--desc">
+                <div class="tabs_cols">
+                  <div>
+                    <h4>Один застосунок замість трьох</h4>
+                    <p>Лад створено для тих, кому набридло перемикатися між окремими програмами для списків справ, календаря й нотаток. Усе зберігається в одному робочому просторі, а зв’язки між завданнями та нотатками не губляться.</p>
+                    <p>Застосунок працює без інтернету та не вимагає облікового запису: ви встановлюєте його й одразу починаєте працювати.</p>
+                  </div>
+                  <div>
+                    <h4>Що входить</h4>
+                    <ul class="check-list">
+                      <li>Канбан-дошки з категоріями й термінами</li>
+                      <li>Тижневий календар</li>
+                      <li>Нотатки з чек-листами та пошуком</li>
+                      <li>Локальні резервні копії</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tabs_panel tabs_panel--specs">
+                <dl class="specs">
+                  <div><dt>Версія</dt><dd>1.4.0</dd></div>
+                  <div><dt>Платформи</dt><dd>Windows 10 / 11, macOS 12+, Ubuntu 22.04+</dd></div>
+                  <div><dt>Розмір</dt><dd>78–92 МБ</dd></div>
+                  <div><dt>Оперативна пам’ять</dt><dd>від 4 ГБ</dd></div>
+                  <div><dt>Місце на диску</dt><dd>250 МБ</dd></div>
+                  <div><dt>Зберігання даних</dt><dd>локально на пристрої</dd></div>
+                  <div><dt>Мова інтерфейсу</dt><dd>українська</dd></div>
+                  <div><dt>Вартість</dt><dd>безкоштовно, без підписки</dd></div>
+                </dl>
+              </div>
+
+              <div class="tabs_panel tabs_panel--guide">
+                <ol class="howto">
+                  <li><b> Створіть проєкт.</b> Дайте йому назву — Лад одразу підготує дошку з трьома колонками.</li>
+                  <li><b> Додайте завдання.</b> Вкажіть категорію та термін, щоб бачити пріоритети.</li>
+                  <li><b> Розплануйте тиждень.</b> Перенесіть завдання в календар на конкретні дні.</li>
+                  <li><b> Ведіть нотатки.</b> Пов’язуйте їх із завданнями й додавайте чек-листи.</li>
+                  <li><b> Налаштуйте резервну копію.</b> Оберіть папку, куди Лад зберігатиме копії даних.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===== 03. Відгуки ===== -->
+    <section class="section section--wide" id="reviews" aria-labelledby="reviews-title">
+      <div class="content">
+        <p class="eyebrow">03 / Відгуки та цифри</p>
+        <h2 class="title" id="reviews-title">Лад обирають ті, хто цінує фокус.</h2>
+        <p class="lead">Невеликий незалежний продукт, який росте разом зі своїми користувачами.</p>
+
+        <!-- Статистика та метрики -->
+        <section class="subsection subsection--first" id="stats" aria-labelledby="stats-title">
+          <h3 class="subtitle visually-hidden" id="stats-title">Лад у цифрах</h3>
+          <div class="stats">
+            <article class="stat">
+              <p class="stat_value">12 400</p>
+              <p class="stat_label">завантажень з моменту релізу 1.0</p>
+              <progress value="12400" max="15000">83 %</progress>
+              <p class="stat_note">83 % від мети на 2026 рік</p>
+            </article>
+            <article class="stat">
+              <p class="stat_value">4,8 <small>/ 5</small></p>
+              <p class="stat_label">середня оцінка користувачів</p>
+              <meter value="4.8" min="0" max="5" low="3" high="4.2" optimum="5">4,8 з 5</meter>
+              <p class="stat_note">за 640 відгуками</p>
+            </article>
+            <article class="stat">
+              <p class="stat_value">1,2 <small>с</small></p>
+              <p class="stat_label">середній час запуску застосунку</p>
+              <meter value="1.2" min="0" max="5" low="2" high="3.5" optimum="0">1,2 с</meter>
+              <p class="stat_note">мета — до 2 секунд</p>
+            </article>
+            <article class="stat">
+              <p class="stat_value">92 <small>%</small></p>
+              <p class="stat_label">звернень отримують відповідь протягом доби</p>
+              <progress value="92" max="100">92 %</progress>
+              <p class="stat_note">середній час відповіді — 6 годин</p>
+            </article>
+          </div>
+          <p class="stats_disclaimer">Демонстраційні дані концепції продукту.</p>
+        </section>
+
+        <!-- Відгуки користувачів -->
+        <section class="subsection" aria-labelledby="testimonials-title">
+          <h3 class="subtitle" id="testimonials-title">Що кажуть користувачі</h3>
+          <div class="reviews">
+            <article class="review">
+              <p class="review_rating"><span class="visually-hidden">Оцінка: 5 з 5</span><span aria-hidden="true">★★★★★</span></p>
+              <blockquote class="review_text"><p>«Нарешті один застосунок замість трьох. Дошки й календар поруч — і я бачу, скільки реально встигаю за тиждень».</p></blockquote>
+              <footer class="review_author">
+                <span class="review_avatar" aria-hidden="true">ОМ</span>
+                <p><span class="review_name">Оксана Мельник</span><span class="review_role">UX-дизайнерка, фриланс</span></p>
+              </footer>
+            </article>
+            <article class="review">
+              <p class="review_rating"><span class="visually-hidden">Оцінка: 5 з 5</span><span aria-hidden="true">★★★★★</span></p>
+              <blockquote class="review_text"><p>«Веду в Ладі курсову: нотатки з джерелами пов’язані із завданнями, тож перед дедлайном нічого не губиться».</p></blockquote>
+              <footer class="review_author">
+                <span class="review_avatar" aria-hidden="true">АК</span>
+                <p><span class="review_name">Андрій Коваль</span><span class="review_role">студент, 4 курс</span></p>
+              </footer>
+            </article>
+            <article class="review">
+              <p class="review_rating"><span class="visually-hidden">Оцінка: 4 з 5</span><span aria-hidden="true">★★★★<span class="star-off">★</span></span></p>
+              <blockquote class="review_text"><p>«Подобається, що дані зберігаються локально, а не на чужому сервері. Чекаю на шаблони проєктів — тоді буде п’ять зірок».</p></blockquote>
+              <footer class="review_author">
+                <span class="review_avatar" aria-hidden="true">ІТ</span>
+                <p><span class="review_name">Ірина Ткаченко</span><span class="review_role">керівниця дизайн-студії</span></p>
+              </footer>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- ===== 04. Історія розвитку ===== -->
+    <section class="section section--wide" id="history" aria-labelledby="history-title">
+      <div class="content">
+        <p class="eyebrow">04 / Історія розвитку</p>
+        <h2 class="title" id="history-title">Від нотатки в блокноті до версії 1.4.</h2>
+        <p class="lead">Лад розвивається невеликими кроками: кожна версія додає одну-дві помітні можливості й не ускладнює те, що вже працює.</p>
+
+        <!-- Таймлайн -->
+        <ol class="timeline">
+          <li class="timeline_item">
+            <div class="timeline_card">
+              <time datetime="2025-03">Березень 2025</time>
+              <h3>Ідея та перші прототипи</h3>
+              <p>Замість трьох окремих програм — один простір для справ, календаря й нотаток. Перші ескізи інтерфейсу.</p>
+            </div>
+          </li>
+          <li class="timeline_item">
+            <div class="timeline_card">
+              <time datetime="2025-09">Вересень 2025</time>
+              <h3>Версія 0.9 — закрите тестування</h3>
+              <p>Канбан-дошки та нотатки протестували 40 користувачів. Їхні відгуки змінили половину інтерфейсу.</p>
+            </div>
+          </li>
+          <li class="timeline_item">
+            <div class="timeline_card">
+              <time datetime="2026-01">Січень 2026</time>
+              <h3>Версія 1.0 — публічний реліз</h3>
+              <p>Перша стабільна версія для Windows і macOS. Дані зберігаються лише локально.</p>
+            </div>
+          </li>
+          <li class="timeline_item">
+            <div class="timeline_card">
+              <time datetime="2026-04">Квітень 2026</time>
+              <h3>Версія 1.2 — Linux і резервні копії</h3>
+              <p>Збірка для Ubuntu та автоматичні резервні копії в обрану користувачем папку.</p>
+            </div>
+          </li>
+          <li class="timeline_item timeline_item--current">
+            <div class="timeline_card">
+              <time datetime="2026-10-08">Жовтень 2026</time>
+              <h3>Версія 1.4 — тижневий календар</h3>
+              <p>Тижневий вигляд календаря, пошук у нотатках і швидше відкриття проєктів.</p>
+            </div>
+          </li>
+          <li class="timeline_item timeline_item--plan">
+            <div class="timeline_card">
+              <time datetime="2027">Далі — 2027</time>
+              <h3>Версія 1.5 — у планах</h3>
+              <p>Шаблони проєктів та експорт нотаток у Markdown — найчастіші побажання користувачів.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== 05. Завантаження ===== -->
+    <section class="section" id="download" aria-labelledby="download-title">
+      <article class="content">
+        <p class="eyebrow">05 / Завантаження</p>
+        <h2 class="title" id="download-title">Ваш наступний день — простіший.</h2>
+        <p class="lead">Оберіть свою операційну систему. Встановлення займає кілька хвилин, а перший проєкт можна створити одразу після запуску.</p>
+        <div class="col3">
+          <article class="os main"><h3>Windows</h3><p>Windows 10 / 11 · 64 біти<br>Інсталятор · 84 МБ</p><a href="#" class="btn">Для Windows ↓</a></article>
+          <article class="os"><h3>macOS</h3><p>macOS 12 і новіші<br>Образ диска · 92 МБ</p><a href="#" class="btn btn-light">Для macOS ↓</a></article>
+          <article class="os"><h3>Linux</h3><p>Ubuntu 22.04 і новіші<br>Пакет застосунку · 78 МБ</p><a href="#" class="btn btn-light">Для Linux ↓</a></article>
+        </div>
+        <p class="safe">◈ Версія 1.4.0 · Усі можливості безкоштовні · Без підписки</p>
+
+        <h3 class="subtitle" id="how">Подивіться, як це працює</h3>
+        <div class="mini-grid">
+          <figure class="mini">
+            <img src="img/Screenshot_2.png" alt="Тижневий вигляд календаря з 12 по 16 жовтня" class="mock-img" loading="lazy">
+            <figcaption class="mini-cap"><b>02 / Тиждень в полі зору</b>Розподіляйте навантаження, бачте дедлайни й залишайте час для зосередженої роботи.</figcaption>
+          </figure>
+          <figure class="mini">
+            <img src="img/Screenshot_3.png" alt="Нотатка «Ідеї для запуску» з чек-листом" class="mock-img" loading="lazy">
+            <figcaption class="mini-cap"><b>03 / Думки стають діями</b>Збирайте ідеї в нотатках і пов’язуйте їх із завданнями. Усе потрібне завжди поруч.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <aside class="sidebar" aria-label="Перед встановленням">
+        <div class="side-block">
+          <h3>Перед встановленням</h3>
+          <p class="side-title">Невибагливий до ресурсів</p>
+          <ul class="req">
+            <li>Пам’ять <span>від 4 ГБ</span></li>
+            <li>Місце на диску <span>250 МБ</span></li>
+            <li>Інтернет <span>для завантаження</span></li>
+            <li>Мова <span>українська</span></li>
+          </ul>
+        </div>
+        <div class="side-block side-block--sep">
+          <h3>Три кроки до початку</h3>
+          <ol class="steps">
+            <li><b aria-hidden="true">01</b>Завантажте файл для своєї системи.</li>
+            <li><b aria-hidden="true">02</b>Встановіть застосунок і відкрийте Лад.</li>
+            <li><b aria-hidden="true">03</b>Створіть проєкт та додайте першу справу.</li>
+          </ol>
+        </div>
+        <div class="side-block">
+          <h3>Що нового у 1.4.0</h3>
+          <ul class="news"><li>Тижневий вигляд календаря</li><li>Пошук у нотатках</li><li>Швидше відкриття проєктів</li></ul>
+          <p class="side-note">Приклади показують демонстраційний проєкт. Ваш робочий простір починається з чистого аркуша.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===== 06. Контакти автора ===== -->
+    <section class="section" id="contacts" aria-labelledby="contacts-title">
+      <article class="content">
+        <p class="eyebrow">06 / Контакти автора</p>
+        <h2 class="title" id="contacts-title">За продуктом стоїть людина.</h2>
+        <p class="lead">Лад — незалежний проєкт, що виріс із простої потреби: менше часу витрачати на організацію, більше — на саму роботу.</p>
+        <article class="author">
+          <div class="avatar" aria-hidden="true">ДЄ</div>
+          <div class="author_info">
+            <h3>Данилюк Єгор</h3>
+            <p>Розробник продукту · Київ, Україна</p>
+            <address class="contact-links flex flex_wrap"><a href="mailto:danyliuk@lad.example">✉ danyliuk@lad.example</a><a href="#">◍ danyliuk.example ⇲</a></address>
+          </div>
+        </article>
+      </article>
+      <aside class="sidebar" aria-label="Відкритий до діалогу">
+        <div class="side-block">
+          <h3 class="accent">Відкритий до діалогу</h3>
+          <p>Маєте ідею для співпраці, запитання про продукт або знайшли помилку? Напишіть автору напряму чи залиште повідомлення нижче.</p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ===== 07. Зворотний зв'язок ===== -->
+    <section class="section" id="feedback" aria-labelledby="feedback-title">
+      <article class="content">
+        <p class="eyebrow">07 / Зворотний зв’язок</p>
+        <h2 class="title" id="feedback-title">Допоможіть Ладу стати кращим.</h2>
+        <p class="lead">Розкажіть, чого бракує для вашої роботи, поділіться враженнями або повідомте про помилку. Ваш досвід визначає наступні кроки продукту.</p>
+        <form class="form" action="#" method="post">
+          <div class="field">
+            <label for="name">Ваше ім’я *</label>
+            <input type="text" id="name" name="name" placeholder="Як до вас звертатися?" required minlength="2" maxlength="40" pattern="[A-Za-zА-ЯҐЄІЇа-яґєії’'\s\-]{2,40}" title="Лише літери, від 2 до 40 символів">
+          </div>
+          <div class="field">
+            <label for="mail">Електронна пошта *</label>
+            <input type="email" id="mail" name="email" placeholder="Ваша адреса для відповіді" required>
+          </div>
+          <div class="field">
+            <label for="topic">Тема звернення *</label>
+            <select id="topic" name="topic" required>
+              <option value="" disabled selected>Оберіть тему</option>
+              <option value="idea">Ідея для нової функції</option>
+              <option value="bug">Повідомлення про помилку</option>
+              <option value="partner">Співпраця</option>
+              <option value="other">Інше</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="version">Версія Ладу</label>
+            <input type="text" id="version" name="version" placeholder="Наприклад, 1.4.0" pattern="\d+\.\d+(\.\d+)?" title="Формат: 1.4 або 1.4.0">
+          </div>
+          <div class="field field--full">
+            <label for="msg">Повідомлення *</label>
+            <textarea id="msg" name="message" placeholder="Що можна поліпшити? Опишіть свою ідею або ситуацію…" required minlength="10"></textarea>
+          </div>
+          <div class="field field--full">
+            <label class="agree"><input type="checkbox" name="agree" required>Погоджуюся на використання вказаних даних для відповіді на моє звернення.</label>
+          </div>
+          <div class="form_actions field--full flex flex_wrap flex_align__center flex_justify_space">
+            <button type="submit" class="btn">Надіслати повідомлення ↗</button>
+            <span class="req-note">* Обов’язкові поля</span>
+          </div>
+        </form>
+      </article>
+      <aside class="sidebar" aria-label="Поради щодо відгуку">
+        <div class="side-block">
+          <h3>Корисний відгук</h3>
+          <p>Якщо знайшли помилку, вкажіть версію Ладу, операційну систему й кроки, після яких вона виникла.</p>
+          <p class="side-mail">Або: <a href="mailto:danyliuk@lad.example" class="link">danyliuk@lad.example ↗</a></p>
+        </div>
+        <div class="side-block side-block--sep">
+          <h3>Повага до приватності</h3>
+          <p>Пошта потрібна лише щоб відповісти. Не додавайте паролі або особисті дані до повідомлення.</p>
+        </div>
+      </aside>
+    </section>
+
+  </main>
+
+  <!-- ===== ПІДВАЛ ===== -->
+  <footer class="footer">
+    <p class="f-logo">лад /</p>
+    <p class="f-slogan">Звільніть місце для важливого.</p>
+    <a href="#top" class="f-top">На початок сторінки ↑</a>
+    <p class="f-copy">© 2026 Лад. Концепція незалежного програмного продукту.</p>
+  </footer>
+
+</div>
+</body>
+</html>

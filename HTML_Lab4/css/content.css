@@ -1,0 +1,76 @@
+.section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  margin-inline: var(--pad-x);
+  border-top: 1px solid var(--color-line);
+}
+.section:first-child { border-top: 0; }
+.content { min-width: 0; padding-block: var(--section-py); }
+.note { font-size: 0.8125rem; margin-left: 0.25rem; }
+.btns { gap: 0.625rem; margin-bottom: 2.75rem; }
+
+/* Головний скріншот */
+.shot img { inline-size: 100%; }
+.caption { font-size: 0.75rem; margin-top: 0.625rem; }
+.caption span { color: var(--color-blue); }
+
+/* Три колонки */
+.col3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.feature { border-top: 1px solid var(--color-line); padding-top: 1.375rem; margin-top: 2.75rem; font-size: var(--font-size-small); line-height: 1.55; }
+.feature h3 { font-size: 1rem; font-weight: 600; color: var(--color-title); margin: 0.5rem 0; }
+.feature i { font-style: normal; color: var(--color-blue); font-size: 1.25rem; }
+
+/* Картки операційних систем */
+.os { display: flex; flex-direction: column; align-items: flex-start; background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 1.5rem; font-size: 0.75rem; line-height: 1.7; transition: border-color .2s; }
+.os:hover { border-color: var(--color-blue); }
+.os.main { border: 2px solid var(--color-blue); }
+.os h3 { font-size: 1.375rem; font-weight: 500; color: var(--color-title); margin-bottom: 0.25rem; }
+.os .btn { margin-top: auto; padding: 0.75rem 1.125rem; font-size: var(--font-size-small); }
+.os p { margin-bottom: 1.125rem; }
+.os .btn-light { border-color: var(--color-line); }
+.safe { font-size: 0.75rem; margin-top: 1.375rem; }
+
+/* Автор */
+.author { display: flex; align-items: flex-start; gap: 1.75rem; background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 1.75rem; margin-top: 1.875rem; }
+.avatar { display: grid; place-items: center; flex-shrink: 0; inline-size: 6rem; aspect-ratio: 1; border-radius: var(--radius); background-color: var(--color-tint); color: var(--color-blue); font-size: 2.5rem; font-weight: 500; }
+.author_info { flex: 1; min-width: 0; }
+.author h3 { font-size: 1.625rem; font-weight: 500; color: var(--color-title); }
+.author p { font-size: 0.8125rem; padding-bottom: 0.875rem; border-bottom: 1px solid var(--color-line); margin-bottom: 0.875rem; }
+.contact-links { gap: 0.5rem 1.625rem; font-style: normal; }
+.contact-links a { color: var(--color-blue); font-size: var(--font-size-small); overflow-wrap: anywhere; }
+.contact-links a:hover { text-decoration: underline; }
+
+/* Форма */
+.form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem 3%; background-color: var(--color-white); border: 1px solid var(--color-line); border-radius: var(--radius); padding: 2rem; }
+.form .field--full { grid-column: 1 / -1; }
+.form label { display: block; font-size: 0.8125rem; font-weight: 500; color: var(--color-title); margin-bottom: 0.5rem; }
+.form input[type=text], .form input[type=email], .form select, .form textarea {
+  inline-size: 100%;
+  border: 1px solid var(--color-line);
+  border-radius: 4px;
+  padding: 0.875rem;
+  font: inherit;
+  font-size: var(--font-size-small);
+  color: var(--color-title);
+  background-color: var(--color-bg);
+  transition: border-color .2s;
+}
+/* Стрілка для select */
+.form select {
+  appearance: none;
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%236b7280' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 0.75rem;
+  cursor: pointer;
+}
+
+.form select:invalid { color: var(--color-text); }
+.form input:focus, .form select:focus, .form textarea:focus { border-color: var(--color-blue); }
+.form input:user-invalid, .form select:user-invalid, .form textarea:user-invalid { border-color: #c2410c; background-color: #fff7ed; }
+.form textarea { min-block-size: 8.75rem; resize: vertical; }
+.form .agree { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.75rem; font-weight: 400; color: var(--color-text); cursor: pointer; }
+.form .agree input { margin-top: 0.2rem; accent-color: var(--color-blue); flex-shrink: 0; }
+.form_actions { gap: 1rem; }
+.form .req-note { font-size: 0.75rem; }

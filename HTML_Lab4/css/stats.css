@@ -1,0 +1,39 @@
+/* Статистика та метрики */
+.stats { display: flex; flex-wrap: wrap; gap: var(--gap); }
+.stat {
+  flex: 1 1 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+.stat_value { font-size: 2.5rem; font-weight: 500; line-height: 1.1; letter-spacing: -1px; color: var(--color-title); }
+.stat_value small { font-size: 1.125rem; color: var(--color-text); letter-spacing: 0; }
+.stat_label { font-size: var(--font-size-small); line-height: 1.45; flex: 1; }
+.stat_note { font-size: 0.75rem; color: var(--color-blue); font-weight: 500; }
+.stats_disclaimer { margin-top: 0.875rem; font-size: 0.75rem; }
+
+/* <progress> і <meter> */
+.stat progress, .stat meter {
+  -webkit-appearance: none;
+  appearance: none;
+  inline-size: 100%;
+  block-size: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--color-tint);
+  margin-top: 0.5rem;
+}
+.stat progress::-webkit-progress-bar { background: var(--color-tint); border-radius: 999px; }
+.stat progress::-webkit-progress-value { background: var(--color-blue); border-radius: 999px; }
+.stat progress::-moz-progress-bar { background: var(--color-blue); border-radius: 999px; }
+.stat meter::-webkit-meter-bar { background: var(--color-tint); border: 0; border-radius: 999px; block-size: 0.5rem; }
+.stat meter::-webkit-meter-optimum-value { background: var(--color-blue); border-radius: 999px; }
+.stat meter::-webkit-meter-suboptimum-value { background: #d97706; border-radius: 999px; }
+.stat meter::-webkit-meter-even-less-good-value { background: #c2410c; border-radius: 999px; }
+.stat meter:-moz-meter-optimum::-moz-meter-bar { background: var(--color-blue); }
+.stat meter:-moz-meter-sub-optimum::-moz-meter-bar { background: #d97706; }

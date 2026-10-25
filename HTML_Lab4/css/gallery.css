@@ -1,0 +1,43 @@
+/* Адаптивна галерея / Медіа-картки */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: var(--gap);
+  margin-top: 2.5rem;
+}
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+/* Ефект ховеру */
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--color-blue);
+}
+/* Пропорції для карток */
+.gallery-card_media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background-color: var(--color-bg);
+  border-bottom: 1px solid var(--color-line);
+}
+/* Гнучке зображення */
+.gallery-card_media img {
+  max-width: 100%;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: transform .4s ease;
+}
+.gallery-card:hover .gallery-card_media img { transform: scale(1.06); }
+.gallery-card_body { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; flex: 1; padding: 1.25rem 1.375rem 1.5rem; }
+.gallery-card_tag { font-size: 0.6875rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--color-blue); background-color: var(--color-tint); padding: 0.25rem 0.5rem; border-radius: 3px; }
+.gallery-card h3 { font-size: 1.0625rem; font-weight: 600; color: var(--color-title); line-height: 1.35; }
+.gallery-card p { font-size: var(--font-size-small); line-height: 1.55; }
