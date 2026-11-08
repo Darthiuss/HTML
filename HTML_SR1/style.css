@@ -1,0 +1,66 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2f5bea;
+  --border: #e3e7f0;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 0 16px 40px; }
+
+/* Шапка: ПІБ, група, варіант */
+header {
+  background: var(--accent);
+  color: #fff;
+  padding: 20px 0;
+}
+header .info { display: flex; flex-wrap: wrap; gap: 8px 32px; }
+header .info span b { font-weight: 600; }
+
+/* Текст завдання */
+.task {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+.task p { margin: 4px 0; }
+
+#status { color: var(--muted); font-size: .95rem; margin-bottom: 12px; }
+#status.error { color: #b91c1c; }
+
+/* Групи (факультети) */
+#groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.faculty {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.faculty h3 {
+  margin: 0;
+  padding: 14px 16px;
+  background: #eaf0ff;
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--border);
+}
+.faculty ul { list-style: none; margin: 0; padding: 0; }
+.faculty li { padding: 12px 16px; border-bottom: 1px solid var(--border); }
+.faculty li:last-child { border-bottom: none; }
+.faculty .dep-name { font-weight: 600; }
+.faculty .dep-head { color: var(--muted); font-size: .9rem; }
+.faculty .count { padding: 8px 16px; font-size: .85rem; color: var(--muted); background: #fafbfe; }

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Самостійна робота №1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container info">
+      <span><b>ПІБ:</b> Данилюк Єгор Андрійович</span>
+      <span><b>Група:</b> АнД-31</span>
+      <span><b>Варіант:</b> 5</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="task">
+      <p><b>Завдання:</b> створити сторінку для обробки JSON-файлу, отриманого з хмарного сховища:
+        зчитати інформацію, створити базовий клас для роботи з даними та вивести перелік кафедр,
+        поділивши їх за трьома факультетами.</p>
+    </section>
+
+    <div id="status">Завантаження даних…</div>
+    <div id="groups"></div>
+  </main>
+
+  <script>
+    // jsonbin.io
+    const BIN_ID = "6af0e7a7ac6210605a782413";
+    const CLOUD_URL = `https://api.jsonbin.io/v3/qs/${BIN_ID}`;
+    const MASTER_KEY = "";
+
+    // Робота з даними
+    class Department {
+      constructor({ name, faculty, head }) {
+        this.name = name;
+        this.faculty = faculty;
+        this.head = head;
+      }
+
+      render() {
+        const li = document.createElement("li");
+
+        const title = document.createElement("div");
+        title.className = "dep-name";
+        title.textContent = this.name;
+
+        const head = document.createElement("div");
+        head.className = "dep-head";
+        head.textContent = "Завідувач: " + this.head;
+
+        li.append(title, head);
+        return li;
+      }
+    }
+
+    // Робота з хмарним сховищем
+    async function loadDepartments() {
+      const options = MASTER_KEY ? { headers: { "X-Master-Key": MASTER_KEY } } : {};
+      const response = await fetch(CLOUD_URL, options);
+      if (!response.ok) {
+        throw new Error("HTTP " + response.status);
+      }
+      const json = await response.json();
+      return json.record ?? json;
+    }
+
+    // Групування за факультетами
+    function groupByFaculty(departments) {
+      const groups = new Map();
+      for (const dep of departments) {
+        if (!groups.has(dep.faculty)) groups.set(dep.faculty, []);
+        groups.get(dep.faculty).push(dep);
+      }
+      return groups;
+    }
+
+    // Вивід
+    function showGroups(departments) {
+      const container = document.getElementById("groups");
+      container.replaceChildren();
+
+      for (const [faculty, items] of groupByFaculty(departments)) {
+        const block = document.createElement("section");
+        block.className = "faculty";
+
+        const h3 = document.createElement("h3");
+        h3.textContent = faculty;
+
+        const ul = document.createElement("ul");
+        items.forEach(dep => ul.append(dep.render()));
+
+        const count = document.createElement("div");
+        count.className = "count";
+        count.textContent = "Кількість кафедр: " + items.length;
+
+        block.append(h3, ul, count);
+        container.append(block);
+      }
+    }
+
+    // Запуск
+    (async function main() {
+      const status = document.getElementById("status");
+      let raw;
+      try {
+        raw = await loadDepartments();
+        status.textContent = "Дані отримано з хмарного сховища jsonbin.io";
+      } catch (err) {
+        status.textContent = "Не вдалося отримати дані з хмари (" + err.message +
+        ").";
+        status.classList.add("error");
+      }
+      showGroups(raw.map(item => new Department(item)));
+    })();
+  </script>
+</body>
+</html>
