@@ -1,0 +1,117 @@
+<section class="card">
+  <h2>Додати поле</h2>
+
+  <form [formGroup]="form" (ngSubmit)="add()" novalidate>
+    <div class="row">
+      <label for="type">Тип поля</label>
+      <select id="type" formControlName="type">
+        <option value="base">Поле (базовий клас)</option>
+        <option value="potato">Картопляне поле (нащадок)</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label for="name">Назва поля</label>
+      <input id="name" type="text" formControlName="name" placeholder="Наприклад: Північне" [class.invalid]="showError('name')" />
+      @if (showError('name')) {
+        <small class="error">
+          @if (form.controls.name.hasError('required')) { Введіть назву поля. }
+          @else if (form.controls.name.hasError('blank')) { Назва не може складатися лише з пробілів. }
+          @else if (form.controls.name.hasError('minlength')) { Назва має містити щонайменше 2 символи. }
+          @else if (form.controls.name.hasError('maxlength')) { Назва має містити не більше 50 символів. }
+          @else if (form.controls.name.hasError('pattern')) { Назва містить недопустимі символи. }
+        </small>
+      }
+    </div>
+
+    <div class="row">
+      <label for="r">r — вага посіяних насіння на одиницю площі (кг/м²)</label>
+      <input id="r" type="number" step="any" formControlName="r" placeholder="Наприклад: 0.25" [class.invalid]="showError('r')" />
+      @if (showError('r')) {
+        <small class="error">
+          @if (form.controls.r.hasError('required')) { Введіть значення r. }
+          @else if (form.controls.r.hasError('positive')) { r має бути числом, більшим за 0. }
+          @else if (form.controls.r.hasError('max')) { r не може перевищувати 1000. }
+        </small>
+      }
+    </div>
+
+    <div class="row">
+      <label for="k">k — коефіцієнт</label>
+      <input id="k" type="number" step="any" formControlName="k" placeholder="Наприклад: 8" [class.invalid]="showError('k')" />
+      @if (showError('k')) {
+        <small class="error">
+          @if (form.controls.k.hasError('required')) { Введіть значення k. }
+          @else if (form.controls.k.hasError('positive')) { k має бути числом, більшим за 0. }
+          @else if (form.controls.k.hasError('max')) { k не може перевищувати 1000. }
+        </small>
+      }
+    </div>
+
+    @if (isPotato) {
+      <div class="row">
+        <label for="S">S — площа поля (м²)</label>
+        <input id="S" type="number" step="any" formControlName="S" placeholder="Наприклад: 1500" [class.invalid]="showError('S')" />
+        @if (showError('S')) {
+          <small class="error">
+            @if (form.controls.S.hasError('required')) { Введіть площу поля S. }
+            @else if (form.controls.S.hasError('positive')) { S має бути числом, більшим за 0. }
+            @else if (form.controls.S.hasError('max')) { S не може перевищувати 1 000 000 000 м². }
+          </small>
+        }
+      </div>
+    }
+
+    <div class="actions">
+      <button type="submit" class="btn btn--primary">Додати та розрахувати</button>
+    </div>
+  </form>
+</section>
+
+<section class="card">
+  <div class="card__head">
+    <h2>Результати</h2>
+    @if (fields.length > 0) {
+      <button type="button" class="btn btn--danger" (click)="clear()">Очистити все</button>
+    }
+  </div>
+
+  @if (fields.length === 0) {
+    <p class="muted">Поки що немає жодного поля. Заповніть форму та натисніть «Додати та розрахувати».</p>
+  } @else {
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Тип</th>
+            <th>Назва</th>
+            <th>r, кг/м²</th>
+            <th>k</th>
+            <th>S, м²</th>
+            <th>Урожай з 1 м², кг</th>
+            <th>Урожай з усього поля, кг</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (f of fields; track $index) {
+            <tr>
+              <td>{{ $index + 1 }}</td>
+              <td>{{ f.typeName }}</td>
+              <td>{{ f.name }}</td>
+              <td>{{ f.r }}</td>
+              <td>{{ f.k }}</td>
+              <td>{{ areaOf(f) ?? '—' }}</td>
+              <td>{{ f.yieldPerUnit() }}</td>
+              <td>
+                @if (isPotatoField(f)) { <strong>{{ f.calcYield() }}</strong> } @else { — }
+              </td>
+              <td><button type="button" class="btn btn--small" (click)="remove($index)">Видалити</button></td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</section>

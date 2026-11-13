@@ -1,0 +1,27 @@
+.header {
+  background: linear-gradient(135deg, #2e7d32, #66bb6a);
+  color: #fff;
+  padding: 24px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.header__title {
+  margin: 0 0 6px;
+  font-size: 2rem;
+}
+
+.header__subtitle {
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .header__title {
+    font-size: 1.5rem;
+  }
+}
