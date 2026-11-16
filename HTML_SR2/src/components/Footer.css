@@ -1,0 +1,12 @@
+.footer { background: var(--color-dark); color: #fff; padding: 28px 32px; gap: 24px 64px; justify-content: space-between; }
+.footer h3 { font-size: 20px; margin-bottom: 8px; }
+.footer p { font-size: 15px; opacity: .9; }
+.footer-info a:hover { text-decoration: underline; }
+.social-list { gap: 10px; max-width: 420px; }
+.social-list a {
+  border: 1px solid #fff; border-radius: 20px; padding: 4px 16px; font-size: 14px;
+  transition: background-color .25s, color .25s;
+}
+.social-list a:hover { background: #fff; color: var(--color-dark); }
+
+@media (max-width: 600px) { .footer { padding: 24px 16px; } }

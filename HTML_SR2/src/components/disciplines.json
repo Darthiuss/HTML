@@ -1,0 +1,14 @@
+[
+  { "id": 1, "name": "Програмування", "credits": 6, "semester": 1, "type": "required" },
+  { "id": 2, "name": "Вища математика", "credits": 6, "semester": 1, "type": "required" },
+  { "id": 3, "name": "Дискретна математика", "credits": 5, "semester": 2, "type": "required" },
+  { "id": 4, "name": "Алгоритми та структури даних", "credits": 6, "semester": 3, "type": "required" },
+  { "id": 5, "name": "Бази даних", "credits": 5, "semester": 4, "type": "required" },
+  { "id": 6, "name": "Веб-технології", "credits": 5, "semester": 4, "type": "required" },
+  { "id": 7, "name": "Тестування програмного забезпечення", "credits": 5, "semester": 6, "type": "required" },
+  { "id": 8, "name": "Мобільна розробка", "credits": 4, "semester": 5, "type": "elective" },
+  { "id": 9, "name": "Машинне навчання", "credits": 4, "semester": 7, "type": "elective" },
+  { "id": 10, "name": "Кібербезпека", "credits": 4, "semester": 7, "type": "elective" },
+  { "id": 11, "name": "Навчальна практика", "credits": 3, "semester": 2, "type": "practice" },
+  { "id": 12, "name": "Виробнича практика", "credits": 6, "semester": 6, "type": "practice" }
+]

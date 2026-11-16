@@ -1,0 +1,8 @@
+{
+  "short_name": "ОП ІПЗ",
+  "name": "Освітня програма «Інженерія програмного забезпечення»",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1d2b53",
+  "background_color": "#f4f1ea"
+}

@@ -1,0 +1,12 @@
+/* Скидання стандартних стилів браузера */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, div, span, h1, h2, h3, h4, p, a, img, ul, li, nav, header, footer, section, aside, main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul, li { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }

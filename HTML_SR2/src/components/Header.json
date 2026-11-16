@@ -1,0 +1,15 @@
+{
+  "title": "Інженерія програмного забезпечення",
+  "subtitle": "Освітня програма · спеціальність 121 · перший (бакалаврський) рівень",
+  "menu": [
+    { "title": "Про програму", "url": "#about" },
+    { "title": "Дисципліни", "url": "#disciplines" },
+    { "title": "Кар'єра", "url": "#career" },
+    { "title": "Контакти", "url": "#footer" }
+  ],
+  "slider": [
+    "./Image/slider/slide1.svg",
+    "./Image/slider/slide2.svg",
+    "./Image/slider/slide3.svg"
+  ]
+}

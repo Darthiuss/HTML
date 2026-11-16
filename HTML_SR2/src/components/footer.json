@@ -1,0 +1,13 @@
+{
+  "name": "Кафедра програмної інженерії",
+  "address": "м. Київ, вул. Університетська, 1",
+  "email": "se-program@example.edu.ua",
+  "phone": "+380 44 000 00 00",
+  "social": [
+    { "title": "Facebook", "url": "https://www.facebook.com/" },
+    { "title": "Instagram", "url": "https://www.instagram.com/" },
+    { "title": "Telegram", "url": "https://t.me/" },
+    { "title": "YouTube", "url": "https://www.youtube.com/" },
+    { "title": "LinkedIn", "url": "https://www.linkedin.com/" }
+  ]
+}

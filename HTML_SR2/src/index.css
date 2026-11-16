@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap&subset=cyrillic');
+@import './reset.css';
+
+:root {
+  --color-bg: #f4f1ea;
+  --color-dark: #1d2b53;
+  --color-accent: #2a9d8f;
+  --color-text: #2b2b2b;
+  --color-card-required: #dbe7f5;
+  --color-card-elective: #e1f3e4;
+  --color-card-practice: #fbe9d7;
+  --font-title: 'Playfair Display', Georgia, serif;
+  --font-text: 'Montserrat', Arial, sans-serif;
+  --width: 1200px;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--font-title); }
+h2 { font-size: 30px; color: var(--color-dark); margin-bottom: 16px; }
+
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.flex-direction-column { flex-direction: column; }

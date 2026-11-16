@@ -1,0 +1,16 @@
+.cards { gap: 16px; }
+.card {
+  width: calc(50% - 8px); padding: 16px 18px; border-radius: 10px;
+  justify-content: space-between; gap: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 6px 14px rgba(0,0,0,.16); }
+.card-title { font-size: 20px; color: var(--color-dark); }
+.card-type { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.card-info { font-size: 14px; opacity: .8; }
+.card-required { background: var(--color-card-required); }
+.card-elective { background: var(--color-card-elective); }
+.card-practice { background: var(--color-card-practice); }
+
+@media (max-width: 600px) { .card { width: 100%; } }

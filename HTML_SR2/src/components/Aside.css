@@ -1,0 +1,7 @@
+.aside { width: 300px; flex-shrink: 0; background: var(--color-bg); border-radius: 12px; padding: 22px 20px; gap: 18px; }
+.aside h2 { font-size: 26px; margin-bottom: 0; }
+.aside-block h3 { font-size: 18px; color: var(--color-accent); margin-bottom: 6px; }
+.aside-block li { font-size: 15px; padding-left: 16px; position: relative; margin-bottom: 4px; }
+.aside-block li::before { content: ''; position: absolute; left: 0; top: .65em; width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
+
+@media (max-width: 900px) { .aside { width: 100%; } }
