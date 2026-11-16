@@ -7,7 +7,7 @@ const NAME_PATTERN = /^[A-Za-zА-Яа-яІіЇїЄєҐґ0-9'’.\- ]+$/;
 
 function positiveNumber(control: AbstractControl): ValidationErrors | null {
   const v = control.value;
-  if (v === null || v === '') return null;
+  if (v === null || v === '') return null; // це перевіряє Validators.required
   const n = Number(v);
   return Number.isFinite(n) && n > 0 ? null : { positive: true };
 }

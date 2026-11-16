@@ -1,0 +1,7 @@
+<nav class="menu">
+  <ul class="menu__list">
+    @for (l of links; track l.path) {
+      <li><a class="menu__link" [routerLink]="l.path" routerLinkActive="menu__link--active">{{ l.title }}</a></li>
+    }
+  </ul>
+</nav>

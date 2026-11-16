@@ -1,9 +1,14 @@
 import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { AppComponent } from './app.component';
+import { routes } from './app.routes';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
-    await TestBed.configureTestingModule({ imports: [AppComponent] }).compileComponents();
+    await TestBed.configureTestingModule({
+      imports: [AppComponent],
+      providers: [provideRouter(routes)]
+    }).compileComponents();
   });
 
   it('should create the app', () => {
@@ -11,11 +16,12 @@ describe('AppComponent', () => {
     expect(fixture.componentInstance).toBeTruthy();
   });
 
-  it('should render header and field component', () => {
+  it('should render header, menu and router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const el: HTMLElement = fixture.nativeElement;
     expect(el.querySelector('app-header')).toBeTruthy();
-    expect(el.querySelector('app-field')).toBeTruthy();
+    expect(el.querySelector('app-menu')).toBeTruthy();
+    expect(el.querySelector('router-outlet')).toBeTruthy();
   });
 });

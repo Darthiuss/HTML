@@ -1,9 +1,9 @@
 /** Базовий клас «Поле» */
 export class Field {
   /**
-   * @param name назва поля
-   * @param r вага посіяних насіння на одиницю площі (кг/м²)
-   * @param k коефіцієнт
+   * @param name
+   * @param r
+   * @param k
    */
   constructor(
     public name: string,

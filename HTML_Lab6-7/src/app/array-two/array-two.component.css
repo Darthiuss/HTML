@@ -1,0 +1,11 @@
+.inline { display: flex; gap: 16px; flex-wrap: wrap; }
+.inline .row { flex: 1 1 140px; }
+.matrix { display: inline-flex; flex-direction: column; gap: 8px; margin-bottom: 8px; max-width: 100%; }
+.matrix__row { display: flex; gap: 8px; align-items: center; }
+.matrix__label { width: 18px; color: #607d8b; font-size: 0.85rem; }
+.matrix input { width: 90px; max-width: 28vw; }
+input.found { background: #fff9c4; border-color: #f9a825; font-weight: 700; }
+.task { font-weight: 600; }
+.ok { color: #2e7d32; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }

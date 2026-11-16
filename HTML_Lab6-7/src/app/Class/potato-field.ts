@@ -3,10 +3,10 @@ import { Field } from './field';
 /** Нащадок «Картопляне поле» */
 export class PotatoField extends Field {
   /**
-   * @param name назва поля
-   * @param r вага посіяних насіння на одиницю площі (кг/м²)
-   * @param k коефіцієнт
-   * @param S площа поля (м²)
+   * @param name
+   * @param r
+   * @param k
+   * @param S
    */
   constructor(
     name: string,

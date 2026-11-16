@@ -1,0 +1,83 @@
+<section class="card">
+  <h2>Двовимірний масив</h2>
+  <p class="task">
+    Дано цілочисельний масив A[1..{{ rows }}, 1..{{ cols }}]. Вивести на екран елементи масиву, кратні {{ divisor }}, і їх індекси.
+  </p>
+  <p class="muted">Елементи — цілі числа в діапазоні [{{ limitMin }}, {{ limitMax }}]. Їх можна згенерувати або ввести вручну. Число 0 також кратне {{ divisor }}.</p>
+
+  <h3>1. Генерація</h3>
+  <form [formGroup]="range" (ngSubmit)="generate()" novalidate>
+    <div class="inline">
+      <div class="row">
+        <label for="from2">Від</label>
+        <input id="from2" type="number" formControlName="from" (keydown)="blockKeys($event)"
+               [class.invalid]="showError(range.controls.from)" />
+        @if (showError(range.controls.from)) {
+          <small class="error">{{ elementError(range.controls.from) }}</small>
+        }
+      </div>
+      <div class="row">
+        <label for="to2">До</label>
+        <input id="to2" type="number" formControlName="to" (keydown)="blockKeys($event)"
+               [class.invalid]="showError(range.controls.to)" />
+        @if (showError(range.controls.to)) {
+          <small class="error">{{ elementError(range.controls.to) }}</small>
+        }
+      </div>
+    </div>
+    @if (range.hasError('order')) {
+      <small class="error">Нижня межа не може бути більшою за верхню.</small>
+    }
+    <div class="actions">
+      <button type="submit" class="btn btn--primary" [disabled]="range.invalid">Згенерувати масив</button>
+    </div>
+  </form>
+
+  <h3>2. Масив A[1..{{ rows }}, 1..{{ cols }}]</h3>
+  <div class="matrix">
+    @for (row of grid.controls; track $index; let i = $index) {
+      <div class="matrix__row">
+        <span class="matrix__label">{{ i + 1 }}</span>
+        @for (c of row.controls; track $index; let j = $index) {
+          <input type="number" [formControl]="c" (keydown)="blockKeys($event)"
+                 [attr.aria-label]="'A[' + (i + 1) + ',' + (j + 1) + ']'"
+                 [class.invalid]="showError(c)" [class.found]="isFound(i, j)" />
+        }
+      </div>
+    }
+  </div>
+  @if (grid.invalid && grid.touched) {
+    <small class="error">Усі {{ rows * cols }} елементів мають бути цілими числами в діапазоні [{{ limitMin }}, {{ limitMax }}].</small>
+  }
+  @if (message) { <p class="ok">{{ message }}</p> }
+
+  <div class="actions">
+    <button type="button" class="btn btn--primary" (click)="find()" [disabled]="grid.invalid">Знайти елементи, кратні {{ divisor }}</button>
+    <button type="button" class="btn" (click)="clear()">Очистити</button>
+  </div>
+</section>
+
+@if (found) {
+  <section class="card">
+    <h2>Результат</h2>
+    @if (found.length === 0) {
+      <p class="muted">Елементів, кратних {{ divisor }}, у масиві немає.</p>
+    } @else {
+      <p>Знайдено елементів, кратних {{ divisor }}: <strong>{{ found.length }}</strong> (підсвічені в таблиці вище).</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>#</th><th>Елемент</th><th>Індекси</th></tr></thead>
+          <tbody>
+            @for (f of found; track $index) {
+              <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ f.value }}</td>
+                <td>A[{{ f.row }}, {{ f.col }}] (рядок {{ f.row }}, стовпець {{ f.col }})</td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    }
+  </section>
+}

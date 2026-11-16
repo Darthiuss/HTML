@@ -1,0 +1,10 @@
+.inline { display: flex; gap: 16px; flex-wrap: wrap; }
+.inline .row { flex: 1 1 140px; }
+.array-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.cell { display: flex; flex-direction: column; width: 84px; }
+.cell__index { font-size: 0.8rem; color: #607d8b; margin-bottom: 2px; }
+.cell input { width: 100%; }
+.task { font-weight: 600; }
+.ok { color: #2e7d32; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
